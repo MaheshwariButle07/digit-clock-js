@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Buhid&display=swap');
+
+        body {
+            background-image: url(./background-img.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 200px 570px;
+            font-size: 60px;
+            font-family: "Noto Sans Buhid", sans-serif;
+        }
+
+        .clock {
+
+            padding: 15px;
+            backdrop-filter: blur(80px);
+            border-radius: 5px;
+            border: 3px solid gray;
+
+        }
+
+        h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        @media screen and (max-width:1300px) {
+
+            body {
+
+                background-size: 1300px;
+                margin: 20px 440px;
+                font-size: 60px;
+               
+
+            }
+
+        }
+
+         @media screen and (max-width:600px) {
+
+            body {
+
+                background-size: 1200px;
+                margin: 20px 75px;
+                font-size: 50px;
+               
+
+            }
+        } 
+        
+    </style>
+</head>
+
+
+
+<body>
+
+    <h2>Digital Clock</h2>
+    <div id="d-clock" class="clock"> </div>
+
+
+    <script>
+
+        function time() {
+            const date = new Date();
+            const time = date.toLocaleTimeString();
+            document.getElementById('d-clock').innerText = time;
+
+        }
+
+        setInterval(time, 1000);
+
+        time();
+
+
+    </script>
+
+</body>
+
+</html>
