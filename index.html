@@ -10,12 +10,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Buhid&display=swap');
 
         body {
-            background-image: url(./background-img.avif);
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 200px 570px;
+            background: #FF0099;
+            background: -webkit-linear-gradient(to right, #493240, #FF0099);
+            background: linear-gradient(to right, #493240, #FF0099);
             font-size: 60px;
             font-family: "Noto Sans Buhid", sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
         }
 
         .clock {
@@ -25,14 +32,15 @@
             border-radius: 5px;
             border: 3px solid gray;
 
+
         }
 
         h2 {
             font-size: 50px;
-            text-align: center;
+
         }
 
-        @media screen and (max-width:1300px) {
+        /* @media screen and (max-width:1300px) {
 
             body {
 
@@ -55,17 +63,17 @@
                
 
             }
-        } 
-        
+        }  */
     </style>
 </head>
 
 
 
 <body>
-
-    <h2>Digital Clock</h2>
-    <div id="d-clock" class="clock"> </div>
+    <div class="container">
+        <h2>Digital Clock</h2>
+        <div id="d-clock" class="clock"> </div>
+    </div>
 
 
     <script>
